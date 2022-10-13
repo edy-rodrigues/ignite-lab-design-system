@@ -1,8 +1,8 @@
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { clsx } from 'clsx';
 
-export interface TextInputRootProps extends HTMLAttributes<HTMLDivElement> {
+export interface TextInputRootProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
@@ -36,7 +36,7 @@ function TextInputIcon(props: TextInputIconProps) {
 
 TextInputIcon.displayName = 'TextInput.Icon';
 
-export interface TextInputBaseProps extends HTMLAttributes<HTMLInputElement> {}
+export interface TextInputBaseProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 function TextInputBase(props: TextInputBaseProps) {
   const { ...rest } = props;
